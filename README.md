@@ -2,6 +2,8 @@
 
 This is a capstone project for the coursera course: *Data Science Professional Certification from IBM*
 
+![pic](./images/k-means_clustered_boroughs.PNG)
+
 ### The capstone project is located [here](./capstone):
 - [Capstone]()
 
