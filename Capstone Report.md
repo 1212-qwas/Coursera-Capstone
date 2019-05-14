@@ -2,12 +2,12 @@
 ### by Bailey Duncan
 
 ## Table of Contents
-1. [Introduction](##1.-Introduction)
-2. [Data Description](##2.-Data-Description)
-3. [Methodology](##3.-Methodology)
-4. [Results](##4.-Results)
-5. [Discussion](##5.-Discussion)
-6. [Conclusion](##6.-Conclusion)
+1. [Introduction](##1.-introduction)
+2. [Data Description](##2.-data-description)
+3. [Methodology](##3.-methodology)
+4. [Results](##4.-results)
+5. [Discussion](##5.-discussion)
+6. [Conclusion](##6.-conclusion)
 
 ## 1. Introduction
 Introduction where you discuss the business problem and who would be interested in this project.
