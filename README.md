@@ -3,8 +3,8 @@
 This is a capstone project for the coursera course: *Data Science Professional Certification from IBM*
 
 ## The capstone project is located [here](./Capstone Project.ipynb):
-- [Capstone Report](./Capstone Report.md)
-- [Capstone Code](./Capstone Project.ipynb)
+- [Capstone Report](Capstone%20Report.md)
+- [Capstone Code](Capstone%20Project.ipynb)
 
 ### Problem Summary:
 
