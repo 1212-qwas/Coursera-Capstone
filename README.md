@@ -1,18 +1,16 @@
 # Coursera-Capstone
 
-This is a capstone project for the coursera course: *Data Science Professional Certification from IBM*
-
-## The capstone project is located [here](./Capstone Project.ipynb):
-- [Capstone Report](Capstone%20Report.md)
-- [Capstone Code](Capstone%20Project.ipynb)
+This is a final capstone project for a data science coursera course.  It is the ninth and final course before obtaining: a *Data Science Professional Certification from IBM & Coursera*. 
 
 ### Problem Summary:
-
+Can we predict a Toronto apartment's rental price by knowing the businesses around it? This capstone is an exploration to see what effect businesses have on nearby apartment prices, and to try and determine the trends that lead to more expensive or desirable living space. If know that certain businesses impact the price of an apartment when they open nearby, 
 
 ### Data Description:
 
 
-A description of the data and how it will be used to solve the problem. (15 marks)
+## The capstone project:
+- [Capstone Report](Capstone%20Report.md)
+- [Capstone Code](Capstone%20Project.ipynb)
 
 ## These notebooks contain other project assignments:
 
