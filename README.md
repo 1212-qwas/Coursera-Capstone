@@ -12,7 +12,6 @@ This is a capstone project for the coursera course: *Data Science Professional C
 ### Data Description:
 
 
-A description of the data and how it will be used to solve the problem. (15 marks)
 
 ## These notebooks contain other project assignments:
 
