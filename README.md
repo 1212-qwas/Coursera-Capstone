@@ -15,10 +15,7 @@ The data used will be a combination of datasets, and data from API calls. The pr
 - [Capstone Data Exploration](Capstone%20Project%20Part%20II.ipynb)
 - [Capstone Machine Learning](Machine%20Learning.ipynb)
 
-## These notebooks contain other project assignments:
-
-### Hello World Notebook
-- [hello world](./hello_world.ipynb)
+## This notebook contains another project using the FourSquare API:
 
 ### K-Means Clustering Toronto Neighborhoods based on their Most Common Restaurant and Store Types
 ![pic](./images/k-means_clustered_boroughs.PNG)
