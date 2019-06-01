@@ -8,12 +8,13 @@ Can we predict a Toronto apartment's rental price by knowing the businesses arou
 ### Data Description:
 The data used will be a combination of datasets, and data from API calls. The primary dataset is compromised of Toronto apartment rental prices for 2018. The dataset contains the price, address, latitude, longitude, and rooms of 1124 apartments for rent in the Toronto area. This dataset is publicly available on Kaggle [here](https://www.kaggle.com/rajacsp/toronto-apartment-price). The Latitude, Longitude values in the dataset will be used with the Foursquare API to find the businesses nearby each apartment.
 
-
-## The capstone project:
+## The Capstone Report:
 - [Capstone Report](Capstone%20Report.md)
-- [Capstone Data Collection & Cleaning](Capstone%20Project%20Part%20I.ipynb)
-- [Capstone Data Exploration](Capstone%20Project%20Part%20II.ipynb)
-- [Capstone Machine Learning](Machine%20Learning.ipynb)
+
+## The Capstone Project:
+- [I. Capstone Data Collection & Cleaning](Capstone%20Project%20Part%20I.ipynb)
+- [II. Capstone Gathering Nearby Businesses and Data Exploration](Capstone%20Project%20Part%20II.ipynb)
+- [III. Capstone Machine Learning](Capstone%20Project%20Part%20III.ipynb)
 
 ## This notebook contains another project using the FourSquare API:
 
