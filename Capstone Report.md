@@ -56,9 +56,9 @@ From this point I looked at the latitude/longitude columns and thought it looked
 ### 3.3 Use of Machine Learning
 An array of machine learning algorithms were used to benchmark their performance before 
 
-![Figure 6. ](./images/model%20evaluation.PNG)
+![Figure 6. Model Evaluation Results](./images/model%20evaluation.PNG)
 
-*Figure 6.*
+*Figure 6.  Model Evaluation Results*
 
 
 [To Top](#table-of-contents)
