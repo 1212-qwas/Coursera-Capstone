@@ -108,6 +108,11 @@ Next I tuned the model hyperparameters to make the model the best it can be, eva
 *Figure 13. Benchmarking Machine Learning Algorithms*
 
 
+![Figure 6. Model Evaluation Results](./images/model%20evaluation.PNG)
+
+*Figure 6.  Model Evaluation Results*
+
+
 [To Top](#table-of-contents)
 
 ## 4 - Results
