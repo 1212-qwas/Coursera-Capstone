@@ -18,7 +18,7 @@ The data used will be a combination of datasets, and data from API calls. The pr
 
 ## This notebook contains another project using the FourSquare API:
 
-### K-Means Clustering Toronto Neighborhoods based on their Most Common Restaurant and Store Types
-![pic](./images/k-means_clustered_boroughs.PNG)
-
 - [Clustering and Segmenting Toronto Neighborhoods](./Clustering%20and%20Segmenting%20Toronto%20Neighborhoods.ipynb)
+
+### K-Means Clustering Toronto Neighborhoods based on their Most Common Restaurant and Store Types
+![image of clustered downtown neightborhoods](./images/k-means_clustered_boroughs.PNG)

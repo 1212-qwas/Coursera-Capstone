@@ -19,7 +19,7 @@ Can we predict a Toronto apartment's rental price by knowing the businesses arou
 [To Top](#table-of-contents)
 
 ## 2 - Data Description
-The data used will be a combination of datasets, and data from API calls. The primary dataset is compromised of Toronto apartment rental prices for 2018. The dataset contains the price, address, latitude, longitude, and rooms of 1124 apartments for rent in the Toronto area. This dataset is publicly available on Kaggle<sup>1</sup>. The Latitude, Longitude values in the dataset will be used with the Foursquare API to find the businesses nearby each apartment.
+The data used will be a combination of datasets, and data from API calls. The primary dataset is compromised of Toronto apartment rental prices for 2018. The dataset contains the price, address, latitude, longitude, and rooms of 1124 apartments for rent in the Toronto area. This dataset is publicly available on Kaggle[<sup>1</sup>](#7---references). The Latitude, Longitude values in the dataset will be used with the Foursquare API to find the businesses nearby each apartment.
 
 [To Top](#table-of-contents)
 
@@ -33,7 +33,7 @@ Several steps were taken to prepare the kaggle dataset for the project. The apar
 
 *Figure 1. Image of the uncleaned Kaggle dataset in a pandas dataframe*
 
-That way I could easily group apartments by the postal code area they reside in (it could also be done with the latitude/longitude, but not without a lot of effort setting up neighborhood boundaries). Next the apartments were mapped using their latitude/longitude so I could identify outliers. I found and removed several stray apartments in Montreal, Calgary, Winnipeg and other Ontario cities that should not have been in the Toronto dataset. I had a dataset listing Toronto neighborhoods for each postal code from a previous project<sup>2</sup>, so I used that to label the neighborhood and borough of each apartment in the dataset. 
+That way I could easily group apartments by the postal code area they reside in (it could also be done with the latitude/longitude, but not without a lot of effort setting up neighborhood boundaries). Next the apartments were mapped using their latitude/longitude so I could identify outliers. I found and removed several stray apartments in Montreal, Calgary, Winnipeg and other Ontario cities that should not have been in the Toronto dataset. I had a dataset listing Toronto neighborhoods for each postal code from a previous project[<sup>2</sup>](#7---references), so I used that to label the neighborhood and borough of each apartment in the dataset. 
 
 ![Figure 2. Stray Apartments in the Dataset](./images/toronto_apt_capstone_zoom4.PNG)
 
@@ -72,7 +72,9 @@ We can see from figure 6.1 that the majority of our apartments are in downtown, 
 
 *Figure 7 Toronto Apartment Price vs. Downtown Proximity*
 
-Next I am looking at the bedrooms, bathrooms and dens to identify correlations and trends without introducing our additional venue data. Lets use the same plot as above to see if those characteristics can help us identify different price brackets close to downtown. 
+Looking at the plot, its very clear that any model we create is going to have trouble identifying prices when a house is close to downtown. Lets filter this plot by our room types and hopefully it will become much clearer.
+
+I am going to look at the bedrooms, bathrooms and dens to identify correlations and trends without introducing our additional venue data. Lets use the same plot as above to see if those characteristics can help us identify different price brackets close to downtown. 
 
 ![Figure 8. Single Bedroom Apartments: Price vs Proximity to Downtown](./images/single_bedroom_price.PNG)
 
@@ -89,44 +91,68 @@ Next I am looking at the bedrooms, bathrooms and dens to identify correlations a
 We see from these three figures that the prices look somewhat linear right of 0.4 scaled distance units, however everything from 0 - 0.4 units is nowhere near a linear trend. Even combining these attributes, we are going to have a lot of error with a regression model unless we introduce more data. This is where the venue data will help us to get better predictions.
 
 ### 3.3 Use of Machine Learning
-An array of regression algorithms were used to benchmark the performance on the dataset. I started with simple linear algorithms, and worked my way up to ensemble methods like Random Forest and Gradient Boosted Decision Trees. Each model was evaluated by taking the mean squared error of the price prediction.
+An array of regression algorithms were used to benchmark the performance on the dataset. I started with simple linear algorithms, and worked my way up to ensemble methods like Random Forest and Gradient Boosted Decision Trees. Each model was evaluated by taking the mean squared error of the model price prediction against the actual rental price.
 
 ![Figure 11. Benchmarking Machine Learning Algorithms](./images/model%20evaluation.PNG)
 
 *Figure 11. Benchmarking Machine Learning Algorithms*
 
-The elastic net performs the best out of the box, so that is the model we will select. It has a root mean square error (RMSE) of $432 and a R-squared correlation of 61% on the test set. 
+The elastic net performs the best out-of-the-box, so that is the model we will select. It has a root mean square error (RMSE) of $432 and a R-squared correlation of 61% on the test set. 
 
 ![Figure 12. Benchmarking Machine Learning Algorithms](./images/model_results.PNG)
 
 *Figure 12. Benchmarking Machine Learning Algorithms*
 
-Next I tuned the model hyperparameters to make the model the best it can be, evaluating its improvement with the test set. I started by doing a random search of the parameters to find a good guess for each, and then used grid search to find the best parameters starting with those guesses. After hyperparameter tuning we get the test set RMSE down to $299, with an accuracy of 86%! Finally we test our tuned model on the validation set and got 74% accuracy with a MSE of $341.
+Next I tuned the model hyperparameters to make the model the best it can be, evaluating its improvement with the test set. I started by doing a random search of the parameters to find a good guess for each, and then used grid search to find the best parameters starting with those guesses. 
 
-![Figure 13. Benchmarking Machine Learning Algorithms](./images/model_results.PNG)
+![Figure 13. Test Set Results on Tuned Model](./images/test_results.PNG)
 
-*Figure 13. Benchmarking Machine Learning Algorithms*
+*Figure 13. Test Set Prediction Results on Tuned Model*
 
+After hyperparameter tuning we get the test set RMSE down to $299, with an accuracy of 86%! Finally we test our tuned model on the validation set and got 74% accuracy with a MSE of $341.
 
-![Figure 6. Model Evaluation Results](./images/model%20evaluation.PNG)
+![Figure 14. Validation Set Results on Tuned Model](./images/validation_results.PNG)
 
-*Figure 6.  Model Evaluation Results*
-
+*Figure 14. Validation Set Prediction Results on Tuned Model*
 
 [To Top](#table-of-contents)
 
 ## 4 - Results
-Results section where you discuss the results.
+
+So far we have shown that we can use machine learning models to predict Toronto apartment prices using the nearby venues and apartment characteristics. From our machine learning model we can look at the most important features to understand the key factors that drive our model. The highest weighted features (**key contributors**) and the lowest weighted features (**key detractors**) will be extracted from our model.
+
+![Figure 15. Key Contributors to Toronto Apartment Prices](./images/contributors.PNG)
+
+*Figure 15. Key Contributors to Toronto Apartment Prices*
+
+After seeing our key contributors, we see that apartments with more Dens, Bathrooms, and Bedrooms have higher prices. That is no surprise. However we also see that most of the contributors are related to outdoors activities, like parks, golf courses, playgrounds, outdoor scenery, and rock climbing. Other notable businesses are wine stores and molecular gastronomy restuarants.
+
+![Figure 16. Key Detractors to Toronto Apartment Prices](./images/detractors.PNG)
+
+*Figure 16. Key Detractors to Toronto Apartment Prices*
+
+Based on the biggest detractors, we see that apartments close to the airport, far from downtown, and near high schools have the lowest prices. Some of the businesses that detract from the price are car mechanics, hot dog stands, message studios, toy & game stores, arcades, Pakistani restuarants, and hookah bars. 
 
 [To Top](#table-of-contents)
 
 ## 5 - Discussion 
-Discussion section where you discuss any observations you noted and any recommendations you can make based on the results.
+
+Based on the results of our model and its contributors/detractors there are several recommendations we can make. 
+
+For apartment building developers, I would recommend developing apartment buildings in neighborhoods with lots of parks, nature, outdoor activities, and as close to downtown as possible, but not near the airport. The units will have the hightest price when these conditions are met and they are not surrounded by car mechanics, hot dog stands, high schools, etc. 
+
+As an owner of an apartment complex, you can drive prices higher, and make higher demand by investing in more green space, parks, playgrounds, and outdoor activities in the neighborhood.
+
+As a tenant looking for an apartment, the price will be lowest if you live further from downtown or closer to the airport. By looking for apartments close to high schools, or without green space nearby, you can find apartments with a similar number of rooms for a lower rental price.
+
+In terms of expanding the model and generalizing it for other cities, we would need significantly more apartment data. Because the data we had was mostly centered around downtown Toronto, it might not be a great indicator for the surrounding cities. As well, the Toronto apartment prices will differ a lot from the apartment prices of other cities due to demand, population, and other factors.
 
 [To Top](#table-of-contents)
 
 ## 6 - Conclusion 
-Conclusion section where you conclude the report.
+In this capstone project, we used Toronto apartment location, rooms, and nearby businesses to train an elastic net regression model to predict the monthly rental price of an apartment. The model can predict the price on average within $341 CAD on our validation set, with 74% accuracy. 
+
+By extracting our most important features, we found out that apartments far from the airport, close to downtown, near high schools, and with outdoor activities like green space, scenery, and parks are higher value apartments for the same number of rooms. This allowed us to make recomendations to tenants, apartment complex owners, and apartment building developers to evaluate apartment value, and ways to increase it by looking at nearby ammenities, and businesses.
 
 [To Top](#table-of-contents)
 
