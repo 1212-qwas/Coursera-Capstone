@@ -13,7 +13,7 @@
 7. [References](#7---references)
 
 ## 1 - Introduction
-Can we predict a Toronto apartment's rental price by knowing the businesses around it? This capstone is an exploration to see what effect businesses have on nearby apartment prices, and to try and determine the trends that lead to more expensive or desirable living space. If we know that certain businesses impact the price of an apartment when they open nearby, we can locate businesses that are more valuable to people. It can help land developers and business owners better forecast how new businesses can have an impact on rent prices of neighborhoods.
+Can we predict a Toronto apartment's rental price by knowing the businesses around it? This capstone is an exploration to see what effect businesses have on nearby apartment prices, and to try and determine the trends that lead to more expensive or desirable living space. If we know that certain businesses impact the price of an apartment when they open nearby, we can locate businesses that are more valuable to people. It can help land developers and business owners better forecast how new businesses can impact apartment rental prices in neighborhoods.
 
 
 [To Top](#table-of-contents)
@@ -131,7 +131,7 @@ After seeing our key contributors, we see that apartments with more Dens, Bathro
 
 *Figure 16. Key Detractors to Toronto Apartment Prices*
 
-Based on the biggest detractors, we see that apartments close to the airport, far from downtown, and near high schools have the lowest prices. Some of the businesses that detract from the price are car mechanics, hot dog stands, message studios, toy & game stores, arcades, Pakistani restuarants, and hookah bars. 
+Based on the biggest detractors, we see that apartments close to the airport, far from downtown, and near high schools have the lowest prices. Some of the businesses that detract from the price are car mechanics, hot dog stands, massage studios, toy & game stores, arcades, Pakistani restuarants, and hookah bars. 
 
 [To Top](#table-of-contents)
 
@@ -139,20 +139,20 @@ Based on the biggest detractors, we see that apartments close to the airport, fa
 
 Based on the results of our model and its contributors/detractors there are several recommendations we can make. 
 
-For apartment building developers, I would recommend developing apartment buildings in neighborhoods with lots of parks, nature, outdoor activities, and as close to downtown as possible, but not near the airport. The units will have the hightest price when these conditions are met and they are not surrounded by car mechanics, hot dog stands, high schools, etc. 
+For apartment building developers, I would recommend developing apartment buildings in neighborhoods with lots of parks, nature, outdoor activities, and as close to downtown as possible, but not near the airport. The units will have the highest price when these conditions are met and they are not surrounded by car mechanics, hot dog stands, high schools, etc. 
 
 As an owner of an apartment complex, you can drive prices higher, and make higher demand by investing in more green space, parks, playgrounds, and outdoor activities in the neighborhood.
 
 As a tenant looking for an apartment, the price will be lowest if you live further from downtown or closer to the airport. By looking for apartments close to high schools, or without green space nearby, you can find apartments with a similar number of rooms for a lower rental price.
 
-In terms of expanding the model and generalizing it for other cities, we would need significantly more apartment data. Because the data we had was mostly centered around downtown Toronto, it might not be a great indicator for the surrounding cities. As well, the Toronto apartment prices will differ a lot from the apartment prices of other cities due to demand, population, and other factors.
+In terms of expanding the model and generalizing it for other cities, we would need significantly more apartment data. Because the data we had was mostly centered around downtown Toronto, it might not be a great indicator for the surrounding cities. As well, the Toronto apartment prices will differ significantly from the apartment prices of other cities due to demand, population, and other factors.
 
 [To Top](#table-of-contents)
 
 ## 6 - Conclusion 
 In this capstone project, we used Toronto apartment location, rooms, and nearby businesses to train an elastic net regression model to predict the monthly rental price of an apartment. The model can predict the price on average within $341 CAD on our validation set, with 74% accuracy. 
 
-By extracting our most important features, we found out that apartments far from the airport, close to downtown, near high schools, and with outdoor activities like green space, scenery, and parks are higher value apartments for the same number of rooms. This allowed us to make recomendations to tenants, apartment complex owners, and apartment building developers to evaluate apartment value, and ways to increase it by looking at nearby ammenities, and businesses.
+By extracting our most important features, we found out that apartments far from the airport, close to downtown, near high schools, and with outdoor activities like green space, scenery, and parks are higher value apartments for the same number of rooms. This allowed us to make recomendations to tenants, apartment complex owners, and apartment building developers to evaluate apartment value, and possibly increase it by investing in nearby ammenities, and businesses operating in the neighborhood.
 
 [To Top](#table-of-contents)
 
